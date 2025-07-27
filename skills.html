@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skills and Expertise - Jeremy Stroup, CSC210 Professor">
+    <meta name="keywords" content="web development skills, HTML5, CSS3, JavaScript, teaching, programming">
+    <meta name="author" content="Jeremy Stroup">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍🏫</text></svg>">
+    
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/animations.css">
+    <link rel="stylesheet" href="CSS/pages.css">
+    
+    <title>My Skills - Student Example</title>
+</head>
+<body>
+    <header role="banner" class="fade-in">
+        <button class="theme-toggle hover-scale" id="theme-toggle">🌙 Dark Mode</button>
+        <div class="container">
+            <h1 class="slide-in-left">Jeremy Stroup</h1>
+            <p class="tagline slide-in-right">Focus on the outcomes or the value you delivered</p>
+        </div>
+    </header>
+
+    <nav role="navigation" aria-label="Main navigation" class="fade-in-delayed">
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="active hover-lift">Home</a></li>
+                <li><a href="about.html" class="hover-lift">Just Me</a></li>
+                <li><a href="skills.html" class="hover-lift">Skills to get it Done</a></li>
+                <li><a href="little_fun.html" class="hover-lift">Something Fun</a></li>
+                <li><a href="contact.html" class="hover-lift">Stay in Touch!</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" role="main">
+        <div class="container">
+            <!-- Page Header -->
+            <section class="page-header scroll-reveal">
+                <h2>My Skills & Outcomes</h2>
+                <p class="page-subtitle">Tying projects and value to skills required</p>
+            </section>
+
+            <!-- Outcomes tied to Skills Section -->
+            <section class="content-section scroll-reveal">
+                <h3>Technical Projects</h3>
+                <div class="skills-categories">
+                    <!-- Project deployed example -->
+                    <div class="skill-category hover-lift">
+                        <h4><span class="category-icon">🎨</span> IBM System Storage Interopation Center</h4>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">Web Development - HTML, CSS, Javascript, JSON</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%;" data-skill="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Database - PostgreSQL, SQL, and CSV files</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%;" data-skill="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Design - Information Modeling with ORM, UML, and ER Diagrams</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%;" data-skill="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Development - C++</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%;" data-skill="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Desployment - Batch jobs with Netfinity Director</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 92%;" data-skill="92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Creative Project Example -->
+                    <div class="skill-category hover-lift">
+                        <h4><span class="category-icon">⚙️</span> IBM Warranty on nonIBM Product - Solves profit margin problem</h4>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">Financial Analysis - ROI, NPM, financial statements</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%;" data-skill="75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Integrated Supply Chain - Cisco MDS, IBM resell agreements, technical support capability</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%;" data-skill="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Contracts - Legal and business negotation, Fixed/Variable reviews</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%;" data-skill="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Executive Approval - Communication, presentation, data storytelling</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%;" data-skill="88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Customer Experience - Launch, worldwide technical support training, and sales training</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%;" data-skill="95%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Current Projects Section -->
+            <section class="content-section scroll-reveal">
+                <h3>Current Problem / Solution</h3>
+                <div class="soft-skills-grid">
+                    <div class="soft-skill-card hover-scale">
+                        <div class="skill-icon">👥</div>
+                        <h4>Problem - Product Development Overhead causing reduced development capacity</h4>
+                        <p>Solution - Build AI application integrated with LLMs to generate repetitive data and reduce overhead costs</p>
+                    </div>
+                    <div class="soft-skill-card hover-scale">
+                        <div class="skill-icon">💡</div>
+                        <h4>Problem - Generative AI skills needed in the future</h4>
+                        <p>Solution - Build a dashboard to help deliver and track new knowledge skills </p>
+                    </div>
+                    <div class="soft-skill-card hover-scale">
+                        <div class="skill-icon">🎯</div>
+                        <h4>Problem - AI is here to stay and an AI Mindset is required. Requires behavior change</h4>
+                        <p>Solution - Demonstrate how AI adds synergy to productivity; scale and velocity increase</p>
+                    </div>
+                    <div class="soft-skill-card hover-scale">
+                        <div class="skill-icon">🤝</div>
+                        <h4>Problem - AI output can be inaccurate</h4>
+                        <p>Solution - TBD; research focused on contextual learning and product development focused on Evals</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technologies Section -->
+            <section class="content-section technologies-section scroll-reveal">
+                <h3>Technologies & Frameworks today</h3>
+                <div class="tech-cloud">
+                    <span class="tech-tag hover-scale">HTML5</span>
+                    <span class="tech-tag hover-scale">CSS3</span>
+                    <span class="tech-tag hover-scale">JavaScript</span>
+                    <span class="tech-tag hover-scale">React</span>
+                    <span class="tech-tag hover-scale">Node.js</span>
+                    <span class="tech-tag hover-scale">Express</span>
+                    <span class="tech-tag hover-scale">MongoDB</span>
+                    <span class="tech-tag hover-scale">Git</span>
+                    <span class="tech-tag hover-scale">REST APIs</span>
+                    <span class="tech-tag hover-scale">JSON</span>
+                    <span class="tech-tag hover-scale">XML</span>
+                    <span class="tech-tag hover-scale">Sass</span>
+                    <span class="tech-tag hover-scale">Bootstrap</span>
+                    <span class="tech-tag hover-scale">jQuery</span>
+                    <span class="tech-tag hover-scale">Webpack</span>
+                    <span class="tech-tag hover-scale">npm</span>
+                    <span class="tech-tag hover-scale">Responsive Design</span>
+                    <span class="tech-tag hover-scale">Accessibility</span>
+                    <span class="tech-tag hover-scale">SEO</span>
+                    <span class="tech-tag hover-scale">Agile</span>
+                </div>
+            </section>
+
+            <!-- Certifications Section -->
+            <section class="content-section certifications-section scroll-reveal">
+                <h3>Professional Development</h3>
+                <div class="cert-grid">
+                    <div class="cert-card hover-lift">
+                        <div class="cert-icon">🏆</div>
+                        <h4>Continuous Learning</h4>
+                        <p>Always staying updated with the latest technologies and teaching methodologies</p>
+                    </div>
+                    <div class="cert-card hover-lift">
+                        <div class="cert-icon">📖</div>
+                        <h4>Course Development</h4>
+                        <p>Regularly updating curriculum to include modern best practices and industry standards</p>
+                    </div>
+                    <div class="cert-card hover-lift">
+                        <div class="cert-icon">🌐</div>
+                        <h4>Community Engagement</h4>
+                        <p>Active participation in web development communities and educational forums</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="page-cta scroll-reveal">
+                <h3>Want to Learn These Skills?</h3>
+                <p>Join Neumont College of Computer Science and start your journey!</p>
+                <a href="contact.html" class="cta-button primary hover-lift">Contact Me</a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Jeremy Stroup | Neumont College of Computer Science</p>
+        </div>
+    </footer>
+
+    <script src="JS/utilities.js"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/skills-animation.js"></script>
+</body>
+</html>

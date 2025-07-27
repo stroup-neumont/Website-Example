@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Little Fun! - Music Player and Pokemon Lookup by Jeremy Stroup">
+    <meta name="keywords" content="music player, pokemon, pokedex, JavaScript, web development project">
+    <meta name="author" content="Jeremy Stroup">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+    
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/animations.css">
+    <link rel="stylesheet" href="CSS/pages.css">
+    <link rel="stylesheet" href="CSS/little_fun_style.css">
+    
+    <title>Little Fun! - Jeremy Stroup | CSC210 Project</title>
+</head>
+<body>
+    <header role="banner" class="fade-in">
+        <button class="theme-toggle hover-scale" id="theme-toggle">🌙 Dark Mode</button>
+        <div class="container">
+            <h1 class="slide-in-left">Jeremy Stroup</h1>
+            <p class="tagline slide-in-right">CSC210 Professor | Web Development Expert</p>
+        </div>
+    </header>
+
+    <nav role="navigation" aria-label="Main navigation" class="fade-in-delayed">
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="active hover-lift">Home</a></li>
+                <li><a href="about.html" class="hover-lift">Just Me</a></li>
+                <li><a href="skills.html" class="hover-lift">Skills to get it Done</a></li>
+                <li><a href="little_fun.html" class="hover-lift">Something Fun</a></li>
+                <li><a href="contact.html" class="hover-lift">Stay in Touch!</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" role="main">
+        <div class="container">
+            <!-- Page Header -->
+            <section class="page-header scroll-reveal">
+                <h2>Little Fun!</h2>
+                <p class="page-subtitle">Interactive demos showcasing JavaScript capabilities</p>
+            </section>
+
+            <!-- Fun Container with proper layout -->
+            <div class="fun-container">
+                <!-- Music Player Widget -->
+                <section class="fun-widget music-widget scroll-reveal">
+                    <div class="widget-header">
+                        <span class="widget-icon">🎵</span>
+                        <h3 class="widget-title">Music Player</h3>
+                    </div>
+
+                    <div class="music-player-wrapper">
+                        <!-- Player Display -->
+                        <div class="player-display">
+                            <div class="album-art">
+                                <span class="music-icon">🎵</span>
+                            </div>
+                            <div class="track-info">
+                                <h4 id="current-song">No song selected</h4>
+                                <p class="artist">Upload a track to begin</p>
+                            </div>
+                        </div>
+
+                        <!-- Hidden Audio Element -->
+                        <audio id="audio-element" style="display: none;">
+                            Your browser does not support the audio element.
+                        </audio>
+
+                        <!-- Progress Bar -->
+                        <div class="player-progress">
+                            <div class="time-display">
+                                <span id="current-time">0:00</span>
+                                <span id="duration">0:00</span>
+                            </div>
+                            <div class="progress-bar-wrapper">
+                                <div class="progress-bar">
+                                    <div class="progress" id="progress"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Player Controls -->
+                        <div class="player-controls">
+                            <button id="stop-btn" class="control-btn">
+                                <span>⏹️</span>
+                            </button>
+                            <button id="play-btn" class="control-btn main">
+                                <span>▶️</span>
+                            </button>
+                            <button id="pause-btn" class="control-btn">
+                                <span>⏸️</span>
+                            </button>
+                        </div>
+
+                        <!-- Upload Section -->
+                        <div class="upload-section">
+                            <label for="audio-upload" class="upload-label hover-lift">
+                                <span class="upload-icon">📁</span>
+                                <span>Choose Audio File</span>
+                                <input type="file" id="audio-upload" accept="audio/*,.mp3,.wav,.ogg,.mp4,.aac,.m4a" aria-label="Upload audio file" />
+                            </label>
+                            <p class="upload-info">MP3, WAV, OGG, MP4, AAC</p>
+                        </div>
+
+                        <!-- Keyboard Shortcuts -->
+                        <div class="shortcuts-compact">
+                            <p><strong>Shortcuts:</strong> Space (Play/Pause), M (Mute), ←→ (Seek), ↑↓ (Volume)</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Pokemon Search Widget -->
+                <section class="fun-widget pokemon-widget scroll-reveal">
+                    <div class="widget-header">
+                        <span class="widget-icon">🔴</span>
+                        <h3 class="widget-title">Pokédex Search</h3>
+                    </div>
+
+                    <div class="pokemon-wrapper">
+                        <!-- Search Box -->
+                        <div class="pokemon-search-box">
+                            <input 
+                                type="text" 
+                                id="pokemonInput" 
+                                class="search-input"
+                                placeholder="e.g., Pikachu or 25"
+                                autocomplete="off"
+                            >
+                            <div class="search-buttons">
+                                <button id="searchBtn" class="search-button">
+                                    <span>🔍</span> Search
+                                </button>
+                                <button id="randomBtn" class="random-button">
+                                    <span>🎲</span> Random
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Loading State -->
+                        <div id="loading" class="loading" style="display: none;">
+                            <div class="pokeball-loader"></div>
+                            <p>Loading Pokémon data...</p>
+                        </div>
+
+                        <!-- Error Message -->
+                        <div id="error" class="error-message" style="display: none;"></div>
+
+                        <!-- Pokemon Display -->
+                        <div id="pokemonDisplay" class="pokemon-display" style="display: none;">
+                            <!-- Basic Info Card -->
+                            <div class="pokemon-card-compact">
+                                <div class="pokemon-header">
+                                    <h4 id="pokemonName" class="pokemon-name"></h4>
+                                    <span id="pokemonId" class="pokemon-id"></span>
+                                </div>
+                                
+                                <div class="pokemon-sprites">
+                                    <div class="sprite-container">
+                                        <img id="pokemonSpriteFront" class="pokemon-sprite" alt="Front sprite">
+                                        <p class="sprite-label">Front</p>
+                                    </div>
+                                    <div class="sprite-container">
+                                        <img id="pokemonSpriteBack" class="pokemon-sprite" alt="Back sprite">
+                                        <p class="sprite-label">Back</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="pokemon-info">
+                                    <div class="info-item">
+                                        <span class="info-label">Height:</span>
+                                        <span id="pokemonHeight" class="info-value"></span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Weight:</span>
+                                        <span id="pokemonWeight" class="info-value"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="pokemon-types" id="pokemonTypes"></div>
+                                
+                                <!-- Abilities Display (ADDED) -->
+                                <div class="pokemon-abilities">
+                                    <h5>Abilities</h5>
+                                    <div id="abilitiesDisplay" class="abilities-container"></div>
+                                </div>
+                                
+                                <button id="addToFavoritesBtn" class="add-favorite-btn">
+                                    <span class="heart-icon">❤️</span> Add to Favorites
+                                </button>
+                            </div>
+
+                            <!-- Stats Card -->
+                            <div class="stats-card-compact">
+                                <h5>Base Stats</h5>
+                                <div id="statsDisplay" class="stats-container"></div>
+                                <div class="stats-total">
+                                    <span>Total:</span>
+                                    <span id="statsTotal" class="total-value"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Favorites Section (mini) -->
+                        <div id="favoritesSection" class="favorites-mini" style="display: none;">
+                            <div class="favorites-header">
+                                <h5>Favorites</h5>
+                                <button id="exportXmlBtn" class="export-btn-mini">
+                                    <span>💾</span> Export
+                                </button>
+                            </div>
+                            <div id="favoritesContainer" class="favorites-container-mini"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Project Information -->
+            <section class="content-section project-info scroll-reveal">
+                <h3>About These Projects</h3>
+                <div class="info-grid">
+                    <div class="info-card hover-lift">
+                        <h4>🎵 Music Player</h4>
+                        <p>A custom audio player built with HTML5 Audio API, featuring keyboard controls and smooth animations.</p>
+                        <ul class="feature-list">
+                            <li>File upload support</li>
+                            <li>Progress tracking</li>
+                            <li>Keyboard shortcuts</li>
+                            <li>Visual notifications</li>
+                        </ul>
+                    </div>
+                    <div class="info-card hover-lift">
+                        <h4>🔴 Pokédex</h4>
+                        <p>Pokemon lookup tool using the PokéAPI, demonstrating API integration and data handling.</p>
+                        <ul class="feature-list">
+                            <li>Real-time API calls</li>
+                            <li>Favorites system</li>
+                            <li>XML export</li>
+                            <li>LocalStorage</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="tech-note">Both projects showcase JavaScript ES6+, async/await, DOM manipulation, and modern web APIs.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Jeremy Stroup | Neumont College of Computer Science</p>
+        </div>
+    </footer>
+
+    <!-- Notification Container -->
+    <div id="notification-container" class="notification-container"></div>
+
+    <!-- Scripts -->
+    <script src="JS/utilities.js"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/audio-player.js"></script>
+    <script src="JS/pmon-main.js"></script>
+    <script src="JS/pmon-api.js"></script>
+    <script src="JS/pmon-xml.js"></script>
+</body>
+</html>

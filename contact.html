@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Jeremy Stroup - CSC210 Professor at Neumont College">
+    <meta name="keywords" content="contact, Jeremy Stroup, Neumont, CSC210, web development">
+    <meta name="author" content="Jeremy Stroup">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📧</text></svg>">
+    
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/animations.css">
+    <link rel="stylesheet" href="CSS/pages.css">
+    
+    <title>Contact Me - Jeremy Stroup | Senior R&D Product Development Leader | Neumont Adjunct Professor</title>
+</head>
+<body>
+    <header role="banner" class="fade-in">
+        <button class="theme-toggle hover-scale" id="theme-toggle">🌙 Dark Mode</button>
+        <div class="container">
+            <h1 class="slide-in-left">Jeremy Stroup</h1>
+            <p class="tagline slide-in-right">Senior R&D Product Development Leader | Neumont Adjunct Professor</p>
+        </div>
+    </header>
+
+    <nav role="navigation" aria-label="Main navigation" class="fade-in-delayed">
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="active hover-lift">Home</a></li>
+                <li><a href="about.html" class="hover-lift">Just Me</a></li>
+                <li><a href="skills.html" class="hover-lift">Skills to get it Done</a></li>
+                <li><a href="little_fun.html" class="hover-lift">Something Fun</a></li>
+                <li><a href="contact.html" class="hover-lift">Stay in Touch!</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" role="main">
+        <div class="container">
+            <!-- Page Header -->
+            <section class="page-header scroll-reveal">
+                <h2>Contact Me</h2>
+                <p class="page-subtitle">Feel free to stay in touch. I always enjoy supporting your career journey and adventure</p>
+            </section>
+
+            <!-- Contact Information -->
+            <section class="content-section contact-grid scroll-reveal">
+                <div class="contact-main">
+                    <h3>Get in Touch</h3>
+                    <p>I'm always happy to hear from students, colleagues, and fellow developers. Whether you have questions about CSC210, need guidance, or want to discuss potential collaborations, feel free to reach out!</p>
+                    
+                    <div class="contact-cards">
+                        <div class="contact-card hover-lift">
+                            <div class="contact-icon">📧</div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:jeremystroup@neumont.edu">jeremystroup@neumont.edu</a></p>
+                            <p class="contact-note">Best for detailed inquiries</p>
+                        </div>
+
+                        <div class="contact-card hover-lift">
+                            <div class="contact-icon">🏫</div>
+                            <h4>Office</h4>
+                            <p>Neumont College of Computer Science</p>
+                            <p>Virtual meetings via Teams</p>
+                            <p class="contact-note">Schedule through email</p>
+                        </div>
+
+                        <div class="contact-card hover-lift">
+                            <div class="contact-icon">💬</div>
+                            <h4>Office Hours</h4>
+                            <p>Usually Monday - Friday, but will respond if I'm online</p>
+                            <p>By appointment</p>
+                            <p class="contact-note">Feel free to reach out via Teams!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="contact-sidebar">
+                    <div class="info-card hover-lift">
+                        <h4>Response Time</h4>
+                        <p>I typically respond to emails within 24-48 hours during weekdays. For urgent matters, please indicate so in your subject line.</p>
+                    </div>
+
+                    <div class="info-card hover-lift">
+                        <h4>Best Times to Reach Me</h4>
+                        <ul class="availability-list">
+                            <li>Weekdays: 9 AM - 5 PM MST</li>
+                            <li>Office Hours: By appointment</li>
+                            <li>Email: Anytime</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card hover-lift">
+                        <h4>Connect on Professional Networks</h4>
+                        <p>Find me on professional platforms for networking and updates on web development trends.</p>
+                    </div>
+                </aside>
+            </section>
+
+            <!-- Contact Form Section -->
+            <section class="content-section contact-form-section scroll-reveal">
+                <h3>Send a Message</h3>
+                <form class="contact-form" id="contact-form_6">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required class="form-input hover-glow">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required class="form-input hover-glow">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" class="form-input hover-glow">
+                            <option value="">Select a topic...</option>
+                            <option value="course">CSC210 Course Question</option>
+                            <option value="advising">Academic Advising</option>
+                            <option value="project">Project Collaboration</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required class="form-input hover-glow"></textarea>
+                    </div>
+
+                    <button type="submit" class="cta-button primary hover-lift">Send Message</button>
+                    <p class="form-note">Note: This is a demo form. Please use the email address above for actual inquiries.</p>
+                </form>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="content-section faq-section scroll-reveal">
+                <h3>Frequently Asked Questions</h3>
+                <div class="faq-list">
+                    <details class="faq-item hover-glow">
+                        <summary>What topics does CSC210 cover?</summary>
+                        <p>CSC210 covers HTML5, CSS3, JavaScript, responsive design, web APIs, JSON/XML, and an introduction to modern frameworks.</p>
+                    </details>
+
+                    <details class="faq-item hover-glow">
+                        <summary>Do I need prior programming experience?</summary>
+                        <p>While helpful, prior programming experience is not required. The course starts with fundamentals and builds up to more advanced concepts.</p>
+                    </details>
+
+                    <details class="faq-item hover-glow">
+                        <summary>How can I prepare for CSC210?</summary>
+                        <p>Familiarize yourself with basic computer concepts and file management. Having a curious mindset and willingness to experiment with code is most important!</p>
+                    </details>
+
+                    <details class="faq-item hover-glow">
+                        <summary>What software do I need for the course?</summary>
+                        <p>You'll need a modern web browser (Chrome, Firefox, or Edge) and a code editor like Visual Studio Code. All software used is free!</p>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Location Section -->
+            <section class="content-section location-section scroll-reveal">
+                <h3>Find Us</h3>
+                <div class="location-info">
+                    <div class="address-card hover-lift">
+                        <h4>Neumont College of Computer Science</h4>
+                        <p>Salt Lake City, Utah</p>
+                        <p>United States</p>
+                        <p class="location-note">Currently conducting classes and meetings virtually</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Jeremy Stroup | Neumont College of Computer Science</p>
+        </div>
+    </footer>
+
+    <script src="JS/utilities.js"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/contact-form.js"></script>
+</body>
+</html>
